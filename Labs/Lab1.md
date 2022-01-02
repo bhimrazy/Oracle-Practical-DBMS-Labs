@@ -11,15 +11,11 @@ It can be categorized broadly into two major categories:
     2. DML (Data Manipulation language): Data Manipulation commands are the most frequently used SQL
     commands and they are as follow, DML commands are Insert. Select, Update,Delete. DML provides certain
     commands that enable users to access or manipulate data from the schema or relation.e.g. Select Insert, Update and Delete.
-
-The Select Command: The select command has four basic parts:
-i) The word select followed by the list of attributes desired in the result.
-ii) The word from followed by the relation/schema from where the data is retrieved.
-iii) The word where followed by the selection criterion.
-iv) The word order/group by followed by criterion.
-
+    
 Consider the schema for the relation employee is given as:
+
 Employee (empno, ename, designation, hiredate, salary, comm, deptno)
+
 The SQL query to create a table employee is as :
 
 ```sql
