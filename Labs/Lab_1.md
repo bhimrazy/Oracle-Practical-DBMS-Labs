@@ -1,4 +1,4 @@
-# Objective: To familiarize with the SQL statements (DML, DDL).
+# LAB 1 - Objective: To familiarize with the SQL statements (DML, DDL).
 
 SQL (Structured Query Language) defines the structure of the data, modify data in the database, and specify security constraints apart from just querying database. It is also the standard relational database language. SQL (Structured Query Language) is a database computer language designed for the retrieval and management of data in relational database management systems (RDBMS), database schema creation and modification, and database object access control rhanagement.
 
