@@ -2,11 +2,15 @@
 
 SQL (Structured Query Language) defines the structure of the data, modify data in the database, and specify security constraints apart from just querying database. It is also the standard relational database language. SQL (Structured Query Language) is a database computer language designed for the retrieval and management of data in relational database management systems (RDBMS), database schema creation and modification, and database object access control rhanagement.
 
-It can be categorized broadly into two major categories: 1. DDL (Data Definition Language): Provides certain commands to specify the certain
-set of definitions by a special language. Also used to specify additional properties of the
-data. E.g. Create, Alter, Drop, Grant, and Revoke.
+It can be categorized broadly into two major categories: 
 
-    2. DML (Data Manipulation language): Data Manipulation commands are the most frequently used SQL commands and they are as follow, DML commands are Insert. Select, Update, Delete. DML provides certain commands that enable users to access or manipulate data from the schema or relation.e.g. Select Insert, Update and Delete.
+    1. DDL (Data Definition Language): Provides certain commands to specify the certain
+    set of definitions by a special language. Also used to specify additional properties of the
+    data. E.g. Create, Alter, Drop, Grant, and Revoke.
+
+    2. DML (Data Manipulation language): Data Manipulation commands are the most frequently used SQL
+    commands and they are as follow, DML commands are Insert. Select, Update,Delete. DML provides certain
+    commands that enable users to access or manipulate data from the schema or relation.e.g. Select Insert, Update and Delete.
 
 The Select Command: The select command has four basic parts:
 i) The word select followed by the list of attributes desired in the result.
@@ -45,3 +49,5 @@ The SQL query to create a table employee is as :
 ```sql
     SELECT * FROM EMPLOYEE;
 ```
+![image](https://user-images.githubusercontent.com/46085301/147871453-fc733b08-ab2a-4c05-a284-107fcb728dc5.png)
+
