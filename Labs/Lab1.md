@@ -19,18 +19,29 @@ Employee (empno, ename, designation, hiredate, salary, comm, deptno)
 The SQL query to create a table employee is as :
 
 ```sql
-CREATE TABLE EMPLOYEE
-    (
-        EMPNO           NUMBER(4),
-        ENAME           VARCHAR2(20),
-        DESIGNATION     VARCHAR2(25),
-        HIREDATE        DATE,
-        SALARY          NUMBER(10),
-        COMM            NUMBER(10,2),
-        DEPTNO          NUMBER(4)
-    );
+    -- Create Table
+    CREATE TABLE EMPLOYEE
+        (
+            EMPNO           NUMBER(4),
+            ENAME           VARCHAR2(20),
+            DESIGNATION     VARCHAR2(25),
+            HIREDATE        DATE,
+            SALARY          NUMBER(10),
+            COMM            NUMBER(10,2),
+            DEPTNO          NUMBER(4)
+        );
+
+    -- Insert Values
+    INSERT INTO EMPLOYEE VALUES(1011,'Ram','Manager','01-jan-95',20000,800,100);
+    INSERT INTO EMPLOYEE VALUES(1021,'Hari','Accountant','04-apr-99',15000,650,200);
+    INSERT INTO EMPLOYEE VALUES(1456,'Shyam','Clerk','03-jul-95',12000,500,300);
+    INSERT INTO EMPLOYEE VALUES(1045,'Sita','Analyst','06-oct-98',18000,700,400);
+    INSERT INTO EMPLOYEE VALUES(1099,'Ramesh','Clerk','01-jan-96',10000,400,300);
+    INSERT INTO EMPLOYEE VALUES(1060,'Hari','Clerk','25-dec-97',10000,400,300);
+
 ```
-
+## Write SQL statements for the following queries:
+1) Find all the information about the employee.
 ```sql
-
+    SELECT * FROM EMPLOYEE;
 ```
