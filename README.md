@@ -7,7 +7,8 @@
 
 ## Setup with docker
 ```bash
-    # Link For Oracle Enterprise in docker hub : https://hub.docker.com/_/oracle-database-enterprise-edition
+    # Link For Oracle Enterprise in docker hub : 
+    # https://hub.docker.com/_/oracle-database-enterprise-edition
     # Login Docker
     $ docker login
 
@@ -29,7 +30,7 @@
 
     # Alter session
     $ alter session set "_ORACLE_SCRIPT"=true;  
-    
+
     # Changing default password for SYS user
     $ alter user sys identified by <new-password>;
 
