@@ -20,10 +20,10 @@
     $ docker images
 
     # Run container
-    $ docker run -d -it --name <Oracle-DB> store/oracle/database-enterprise:12.2.0.1-slim
+    $ docker run -d -it store/oracle/database-enterprise:12.2.0.1-slim
 
     # Connecting from within the container
-    $ docker exec -it <Oracle-DB> bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+    $ docker exec -it c5b1ae557040 bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
 
     # Connect to system
     $ connect system
