@@ -2,32 +2,36 @@
 
 Data Manipulation Language (Contd...)
 
-1. The Insert command:
-To insert data into table, one tuple at a time, the insert command is used in the ways.
-    i) To insert data into a table(t) of n attributes
-        -insert into t values ('a1', 'a2'...'an'). 
-    ii) To insert data into the specified columns (A1, A2, A3... An). 
-    -insert into t (A1, A2, A3....An) values ('a1','a2', 'a3'......'an").
+1.  The Insert command:
+    To insert data into table, one tuple at a time, the insert command is used in the ways.
 
-2. The Update command: 
-To modify or update the data stored within the table, use update command.
-The command has three parts:
-    i) The word update followed by the table you want to change, (mandatory)
-    ii) The word set followed by one or more columns you want to change (mandatory)
-    iii) The word where followed by selection criterion (Optional)
+        i) To insert data into a table(t) of n attributes
+            -insert into t values ('a1', 'a2'...'an').
+        ii) To insert data into the specified columns (A1, A2, A3... An).
+        -insert into t (A1, A2, A3....An) values ('a1','a2', 'a3'......'an").
+
+2.  The Update command:
+    To modify or update the data stored within the table, use update command.
+    The command has three parts:
+
+        i) The word update followed by the table you want to change, (mandatory)
+        ii) The word set followed by one or more columns you want to change (mandatory)
+        iii) The word where followed by selection criterion (Optional)
 
 General format of command: Update t set A=new value where X.
 
-3. The Delete command: 
-To remove one or more rows of data from a table use delete command. The command
-has two parts:
-    i) The word delete from followed by the table name you want to remove data 
-    ii) The word where followed by the criterion for deletion.
+3. The Delete command:
+   To remove one or more rows of data from a table use delete command. The command
+   has two parts:
+
+   i) The word delete from followed by the table name you want to remove data
+   ii) The word where followed by the criterion for deletion.
 
 General format of command: Delete from t where X.
 
 The relation of the employees has following description as follows:
-``` 
+
+```
     empno number not null               ename varchar2 not null
     Phone number                        designation varchar2 not null
     hiredate date                       sal number not null
@@ -167,7 +171,7 @@ Write SQL statements for the following queries:
 
 ```
 
-7. Transfer Hari to department 100. 
+7. Transfer Hari to department 100.
 
 ```sql
     -- Query
@@ -185,7 +189,8 @@ Write SQL statements for the following queries:
       1788 Ramesh                  4445534 Sub-Clerk                 14-APR-96       9600       1260        600
 
 ```
-8) Transfer the Ramesh with empid 1788 to department 500.
+
+8. Transfer the Ramesh with empid 1788 to department 500.
 
 ```sql
     -- Query
@@ -203,7 +208,9 @@ Write SQL statements for the following queries:
       1788 Ramesh                  4445534 Sub-Clerk                 14-APR-96       9600       1260        500
 
 ```
-9) Delete the record of Sita.
+
+9. Delete the record of Sita.
+
 ```sql
     -- Query
     DELETE EMPLOYEE WHERE ENAME='Sita';
@@ -219,7 +226,9 @@ Write SQL statements for the following queries:
       1788 Ramesh                  4445534 Sub-Clerk                 14-APR-96       9600       1260        500
 
 ```
-10) Delete the record of Shyam whose empid is 1456.
+
+10. Delete the record of Shyam whose empid is 1456.
+
 ```sql
     -- Query
     DELETE EMPLOYEE WHERE EMPNO=1456;
@@ -234,7 +243,8 @@ Write SQL statements for the following queries:
       1788 Ramesh                  4445534 Sub-Clerk                 14-APR-96       9600       1260        500
 
 ```
-11) Transfer the Hari to department 100 and increment his salary by 1500.
+
+11. Transfer the Hari to department 100 and increment his salary by 1500.
 
 ```sql
     -- Query
@@ -250,7 +260,8 @@ Write SQL statements for the following queries:
       1788 Ramesh                  4445534 Sub-Clerk                 14-APR-96       9600       1260        500
 
 ```
-12) Delete all the record of table employee.
+
+12. Delete all the record of table employee.
 
 ```sql
     -- Query
