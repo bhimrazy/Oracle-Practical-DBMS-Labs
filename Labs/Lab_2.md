@@ -8,7 +8,7 @@ Data Manipulation Language (Contd...)
         i) To insert data into a table(t) of n attributes
             -insert into t values ('a1', 'a2'...'an').
         ii) To insert data into the specified columns (A1, A2, A3... An).
-        -insert into t (A1, A2, A3....An) values ('a1','a2', 'a3'......'an").
+            -insert into t (A1, A2, A3....An) values ('a1','a2', 'a3'......'an").
 
 2.  The Update command:
     To modify or update the data stored within the table, use update command.
