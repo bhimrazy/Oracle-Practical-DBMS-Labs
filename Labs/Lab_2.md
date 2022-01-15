@@ -24,8 +24,8 @@ General format of command: Update t set A=new value where X.
    To remove one or more rows of data from a table use delete command. The command
    has two parts:
 
-   i) The word delete from followed by the table name you want to remove data
-   ii) The word where followed by the criterion for deletion.
+        i) The word delete from followed by the table name you want to remove data
+        ii) The word where followed by the criterion for deletion.
 
 General format of command: Delete from t where X.
 
