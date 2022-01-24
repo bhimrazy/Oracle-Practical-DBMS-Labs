@@ -1,18 +1,17 @@
 # LAB 3 : To familiarize with the SQL statements and the constraints.
 
 ## Objective: 
-
-i) To familiarize with the SQL DML statements like Create, Alter, Drop.
-ii) To familiarize with the constraints (Primary Constraints and Check Constraints)
+    i) To familiarize with the SQL DML statements like Create, Alter, Drop.
+    ii) To familiarize with the constraints (Primary Constraints and Check Constraints)
 
 ### Sample relations:
 
-1.Student schema (crn, name, address, phone, dob)
-2.Department schema (deptid, dnumber, dname)
-3.Course schema (Courseid, coursename, duration, fee)
+    1.Student schema (crn, name, address, phone, dob)
+    2.Department schema (deptid, dnumber, dname)
+    3.Course schema (Courseid, coursename, duration, fee)
 
 ### Write SQL Statements for the following:
-1.Create a relation student on the student schema with the underlined attribute as a primary key. The attribute is not null.
+1. Create a relation student on the student schema with the underlined attribute as a primary key. The attribute is not null.
 
 ```sql
 
@@ -27,22 +26,23 @@ ii) To familiarize with the constraints (Primary Constraints and Check Constrain
         );
 
     -- Result
-
     Name                                      Null?    Type
-    ----------------------------------------- -------- ----------------------------
+    ----------------------------------------- -------- ----------------------
     CRN                                       NOT NULL VARCHAR2(12)
     NAME                                      NOT NULL VARCHAR2(20)
     ADDRESS                                   NOT NULL VARCHAR2(25)
     PHONE                                     NOT NULL NUMBER(10)
     DOB                                                DATE
-
-
 ```
 
 2.Insert a tuple into relation student with crn as null. Comment.
 
 ```sql
-     INSERT INTO STUDENT VALUES(null,'Ram','Kathmandu',9800452486,'01-jan-95'); -- cannot insert null
+    -- Query
+    INSERT INTO STUDENT VALUES(null,'Ram','Kathmandu',9800452486,'01-jan-95'); 
+    
+    -- Comment
+    -- cannot insert null
 ```
 3.Insert a tuple into student with crn 066/bct/045. Comment.
 ```sql
