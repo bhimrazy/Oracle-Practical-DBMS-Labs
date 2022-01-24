@@ -36,7 +36,7 @@
     DOB                                                DATE
 ```
 
-2.Insert a tuple into relation student with crn as null. Comment.
+2. Insert a tuple into relation student with crn as null. Comment.
 
 ```sql
     -- Query
@@ -47,7 +47,7 @@
     -- donot accept null value
 ```
 
-3.Insert a tuple into student with crn 066/bct/045. Comment.
+3. Insert a tuple into student with crn 066/bct/045. Comment.
 
 ```sql
     -- Query
@@ -63,7 +63,7 @@
 
 ```
 
-4.Insert a tuple into student with crn 066/bct/045. Comment.
+4. Insert a tuple into student with crn 066/bct/045. Comment.
 
 ```sql
     -- Query
@@ -73,7 +73,7 @@
     -- Since, CRN is specified as a primary key so by default it only takes unique values.
 ```
 
-5.Alter the relation student to add parents name and emailid.
+5. Alter the relation student to add parents name and emailid.
 
 ```sql
     -- Query
@@ -91,7 +91,7 @@
         EMAILID                                            VARCHAR2(30)
 ```
 
-6.Create a relation department on the department schema with the underlined attribute as primary key.
+6. Create a relation department on the department schema with the underlined attribute as primary key.
 Add the constraint to the relation department such that dnumber is only between 10 and 50 and also dname should be in capital letter.
 
 ```sql
@@ -111,7 +111,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```
 
-7.Insert a tuple into a relation department with dnumber as 10 and dname as COMPUTER. Comment.
+7. Insert a tuple into a relation department with dnumber as 10 and dname as COMPUTER. Comment.
 
 ```sql
     -- Query
@@ -123,7 +123,7 @@ Add the constraint to the relation department such that dnumber is only between 
     IT01    10        COMPUTER
 ```
 
-8.Insert a tuple into a relation department with dnumber as 20 and dname as Civil. Comment.
+8. Insert a tuple into a relation department with dnumber as 20 and dname as Civil. Comment.
 
 ```sql
     -- Query
@@ -135,7 +135,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```
 
-9.Create a relation course on course schema with the underlined attribute as primary key. The course name is unique.
+9. Create a relation course on course schema with the underlined attribute as primary key. The course name is unique.
 
 ```sql
     -- Query
@@ -152,7 +152,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```
 
-10.Add a constraint to the relation course such that the minimum fee for all courses is 5000.
+10. Add a constraint to the relation course such that the minimum fee for all courses is 5000.
 
 ```sql
     -- Query
@@ -160,14 +160,14 @@ Add the constraint to the relation department such that dnumber is only between 
     ALTER TABLE COURSE ADD CONSTRAINT FEE_CHK CHECK(FEE>=5000); -- Table altered.
 ```
 
-11.Fill in the table course with the data of your choices provided that the courses offered are only LINUX, ORACLE, JAVA and CISCO.
+11. Fill in the table course with the data of your choices provided that the courses offered are only LINUX, ORACLE, JAVA and CISCO.
 
 ```sql
     -- Query
     ALTER TABLE COURSE ADD CONSTRAINT CNAME_CHK CHECK(COURSENAME IN ('JAVA','LINUX','ORACLE','CISCO')); -- Table altered.
 ```
 
-12.Insert a tuple into the relation course with the course name Visual Basic. Comment.
+12. Insert a tuple into the relation course with the course name Visual Basic. Comment.
 
 ```sql
     -- Query
@@ -179,7 +179,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```
 
-13.Add a constraint to the relation student so that the attributes phone number and dob together form a unique key.
+13. Add a constraint to the relation student so that the attributes phone number and dob together form a unique key.
 
 ```sql
     -- Query
@@ -187,75 +187,75 @@ Add the constraint to the relation department such that dnumber is only between 
     ALTER TABLE STUDENT ADD CONSTRAINT STU_UNQ UNIQUE(PHONE,DOB); -- Table altered.
 ```
 
-14.Insert a tuple into relation student with dob as null. Comment.
+14. Insert a tuple into relation student with dob as null. Comment.
 
 ```sql
     -- Query
-    INSERT INTO STUDENT STUDENT VALUES('075/bct/045','Hari','Kathmandu',9800452486,null,'Mohan','eamil@email.com'); 
-    
+    INSERT INTO STUDENT STUDENT VALUES('075/bct/045','Hari','Kathmandu',9800452486,null,'Mohan','eamil@email.com');
+
     -- Comment : -- 1 row created.
     -- Since, DOB field also accepts null field , the data get's inserted.
 
 ```
 
-15.Insert a tuple into the relation student with the attributes phone number as null value. Comment.
+15. Insert a tuple into the relation student with the attributes phone number as null value. Comment.
 
 ```sql
     -- Query
-    INSERT INTO STUDENT STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,'05-jan-95','Jetu','eamil@email.com'); 
+    INSERT INTO STUDENT STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,'05-jan-95','Jetu','eamil@email.com');
 
     -- Comment : ORA-01400: cannot insert NULL into ("STUDENT"."PHONE")
     -- Since, there is NOT NULL constraint in schema of student , so it doesnot allow data insertion with null phone no.
 
 ```
 
-16.Insert a tuple into the relation student with both the attribute phone number and dob as null value. Comment.
+16. Insert a tuple into the relation student with both the attribute phone number and dob as null value. Comment.
 
 ```sql
     -- Query
-    INSERT INTO STUDENT STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,null,'Jetu','eamil@email.com'); 
+    INSERT INTO STUDENT STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,null,'Jetu','eamil@email.com');
 
     -- Comment : ORA-01400: cannot insert NULL into ("STUDENT"."PHONE")
     -- Since, there is NOT NULL constraint in schema of student , so it doesnot allow data insertion with null phone no.
 
 ```
 
-17.Drop the constraint applied to dname of schema department.
+17. Drop the constraint applied to dname of schema department.
 
 ```sql
     -- Query
     ALTER TABLE DEPARTMENT DROP CONSTRAINT DNAME_CHK; -- Table altered.
 ```
 
-18.Alter the relation Course to change the data type from integer to floating point.
+18. Alter the relation Course to change the data type from integer to floating point.
 
 ```sql
     -- Query
     ALTER TABLE COURSE MODIFY FEE NUMBER(10,2); -- Table altered.
 ```
 
-19.Drop the constraint applied on combination of attributes phone number and dob from relation student.
+19. Drop the constraint applied on combination of attributes phone number and dob from relation student.
 
 ```sql
     -- Query
     ALTER TABLE STUDENT DROP CONSTRAINT STU_UNQ;  -- Table altered.
 ```
 
-20.Delete all the records from the relation student.
+20. Delete all the records from the relation student.
 
 ```sql
     -- Query
     DELETE STUDENT;  -- All rows deleted.
 ```
 
-21.Remove the relation student from the database.
+21. Remove the relation student from the database.
 
 ```sql
     -- Query
     DROP TABLE STUDENT;  -- Table dropped.
 ```
 
-22.Remove the relation course and department from the database.
+22. Remove the relation course and department from the database.
 
 ```sql
     -- Query
