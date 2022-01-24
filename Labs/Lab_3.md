@@ -1,4 +1,4 @@
-# Lab 3
+# LAB 3 : To familiarize with the SQL statements and the constraints.
 
 ## Objective: 
 
