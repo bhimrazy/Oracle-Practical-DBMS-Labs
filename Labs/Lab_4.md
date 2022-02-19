@@ -262,7 +262,6 @@ C105. Comment.
     NAME                 ADDRESS
     -------------------- -------------------------
     Sita                 Lagankhel
-    Sita                 Lagankhel
 
 ```
 
@@ -271,6 +270,127 @@ linux.
 
 ```sql
 
-    -- SELECT NAME,ADDRESS,CID FROM STUDENT,ENROLL WHERE STUDENT.CRN=ENROLL.CRN AND ENROLL.CID = ;
+    --Query
+    SELECT NAME FROM STUDENT WHERE CRN IN (SELECT CRN FROM ENROLL WHERE ENROLL.CID = (SELECT COURSEID FROM COURSE WHERE CNAME ='Oracle')
+    INTERSECT SELECT CRN FROM ENROLL WHERE ENROLL.CID = (SELECT COURSEID FROM COURSE WHERE CNAME ='Linux'));
+
+    --Result
+
+```
+
+12. Delete the record of student having crn 075/bct/115.Comment.
+
+```sql
+
+    --Query
+    DELETE STUDENT WHERE CRN = '075/bct/115';
+
+    -- Comment : ORA-02292: integrity constraint violated - child record found
+    -- Restricted the deletion of the parent record as it has associated child records in the enroll table.
+
+```
+
+13. Delete the record of the student having enroll id E12.Comment.
+
+```sql
+
+    --Query
+    DELETE ENROLL WHERE ENROLLID = 'E12';
+
+    --Comment :
+    -- Record deleted.
+
+```
+
+14. Delete the record of student who are enrolled in a course fee less than 15000.
+
+```sql
+
+    --Query
+    DELETE FROM ENROLL
+    WHERE ENROLL.CID IN (SELECT COURSEID FROM COURSE WHERE FEE <15000);
+
+    --Result
+
+```
+
+15. Create view with crn,name and addres of student.
+
+```sql
+
+    --Query
+    CREATE VIEW VIEW_STUDENT AS SELECT CRN,NAME,ADDRESS FROM STUDENT;
+
+    --Result
+    -- SELECT * FROM VIEW_STUDENT;
+
+    CRN            NAME                 ADDRESS
+    -------------- -------------------- -------------------------
+    075/bct/112    Anil                 Lalitpur
+    075/bct/115    Bibek                Bhaktapur
+    075/bct/166    Rohan                New Road
+    075/bct/188    Puja                 Baneshwor
+    075/bct/154    John                 Jorpati
+
+```
+
+16. Create a view 'student_course' having the attributes crn,name,phone,coursename,enrolldt.
+
+```sql
+
+    --Query
+    CREATE VIEW STUDENT_COURSE AS SELECT STUDENT.CRN,NAME,PHONE,CNAME,ENROLLDT FROM STUDENT,ENROLL,COURSE
+    WHERE STUDENT.CRN=ENROLL.CRN AND COURSE.COURSEID=ENROLL.CID ;
+
+    --Result
+    -- SELECT * FROM STUDENT_COURSE;
+
+    CRN            NAME                      PHONE CNAME                ENROLLDT
+    -------------- -------------------- ---------- -------------------- ---------
+    075/bct/112    Anil                    9845268 Java                 23-JAN-11
+    075/bct/115    Bibek                  98452688 Java                 23-JAN-11
+    075/bct/166    Rohan                 984548268 Java                 01-APR-12
+    075/bct/188    Puja                   42322432 Java                 23-APR-12
+
+
+```
+
+17. create view with the crn and names of students who have taekn course linux.
+
+```sql
+
+    --Query
+    CREATE VIEW STUDENT_V AS SELECT STUDENT.CRN,STUDENT.NAME FROM STUDENT,ENROLL WHERE STUDENT.CRN=ENROLL.CRN
+    AND ENROLL.CID = (SELECT COURSEID FROM COURSE WHERE CNAME = 'Linux');
+
+    --Result
+    -- SELECT * FROM STUDENT_V;
+
+    CRN            NAME
+    -------------- --------------------
+    075/bct/176    Sita
+
+
+```
+
+18. Drop the view 'student_course'.
+
+```sql
+
+    --Query
+    DROP VIEW STUDENT_COURSE;
+
+    --Result
+
+```
+
+19. Drop the table student.Comment.
+
+```sql
+
+    --Query
+    DROP TABLE STUDENT;
+
+    --Comment : ORA-02449: unique/primary keys in table referenced by foreign keys
 
 ```
