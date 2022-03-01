@@ -202,7 +202,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```sql
     -- Query
-    INSERT INTO STUDENT STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,'05-jan-95','Jetu','eamil@email.com');
+    INSERT INTO STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,'05-jan-95','Jetu','eamil@email.com');
 
     -- Comment : ORA-01400: cannot insert NULL into ("STUDENT"."PHONE")
     -- Since, there is NOT NULL constraint in schema of student , so it doesnot allow data insertion with null phone no.
@@ -213,7 +213,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```sql
     -- Query
-    INSERT INTO STUDENT STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,null,'Jetu','eamil@email.com');
+    INSERT INTO STUDENT VALUES('077/bct/045','Ramesh','Kathmandu',null,null,'Jetu','eamil@email.com');
 
     -- Comment : ORA-01400: cannot insert NULL into ("STUDENT"."PHONE")
     -- Since, there is NOT NULL constraint in schema of student , so it doesnot allow data insertion with null phone no.
