@@ -191,7 +191,7 @@ Add the constraint to the relation department such that dnumber is only between 
 
 ```sql
     -- Query
-    INSERT INTO STUDENT STUDENT VALUES('075/bct/045','Hari','Kathmandu',9800452486,null,'Mohan','eamil@email.com');
+    INSERT INTO STUDENT VALUES('075/bct/045','Hari','Kathmandu',9800452486,null,'Mohan','eamil@email.com');
 
     -- Comment : -- 1 row created.
     -- Since, DOB field also accepts null field , the data get's inserted.
